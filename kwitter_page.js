@@ -38,7 +38,7 @@ like = message_data["like"];
 name = message_data["name"];
 message = message_data["message"];
 name_with_tag = "<h4>" + name +"<img src='tick.png' class='user_tick'></h4>";
-msg_to_be_shown = "<h4 class='message_h4'>" + message + "</h4>";
+msg_to_be_shown = "<h4 class='message_h4'>" + message + "</h4> <hr>";
 row = name_with_tag + msg_to_be_shown 
 document.getElementById("output").innerHTML += row;
 //End code
