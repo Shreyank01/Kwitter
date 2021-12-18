@@ -39,9 +39,7 @@ name = message_data["name"];
 message = message_data["message"];
 name_with_tag = "<h4>" + name +"<img src='tick.png' class='user_tick'></h4>";
 msg_to_be_shown = "<h4 class='message_h4'>" + message + "</h4>";
-like_button = "<button class='btn btn-warning' id=" + firebase_message_id + " value =" + like + "onclick='update_like(this.id)'>";
-span_with_tag = "<span class='glyphicon glyphicon-thumbs-up'> Like: " + like + "</span> </button>";
-row = name_with_tag + msg_to_be_shown + like_button + span_with_tag;
+row = name_with_tag + msg_to_be_shown 
 document.getElementById("output").innerHTML = row;
 //End code
       } });  }); }
@@ -56,13 +54,3 @@ function logout() {
 
 }
 
-function update_like(message_id) {
-      console.log("you have clicked on like button - " + message_id);
-      button_id = message_id;
-      likes = document.getElementById(button_id).value;
-      updatelikes = Number(likes) + 1;
-      console.log(updatelikes);
-      firebase.database().ref(room_name).child(message_id).update({
-            like:updatelikes
-      });
-}

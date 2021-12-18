@@ -1,0 +1,15 @@
+function update_like(message_id) {
+      console.log("you have clicked on like button - " + message_id);
+      button_id = message_id;
+      likes = document.getElementById(button_id).value;
+      updatelikes = Number(likes) + 1;
+      console.log(updatelikes);
+      firebase.database().ref(room_name).child(message_id).update({
+            like:updatelikes
+      });
+}
+________________________________________________________________________
+
+like_button = "<button class='btn btn-warning' id=" + firebase_message_id + " value =" + like + "onclick='update_like(this.id)'>";
+span_with_tag = "<span class='glyphicon glyphicon-thumbs-up'> Like: " + like + "</span> </button>";
+
