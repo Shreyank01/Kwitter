@@ -22,7 +22,7 @@ function send() {
       firebase.database().ref(room_name).push({
             name:user_name,
             message:msg,
-            like:0
+           
       });
 
       document.getElementById("msg").value = "";
@@ -40,7 +40,7 @@ message = message_data["message"];
 name_with_tag = "<h4>" + name +"<img src='tick.png' class='user_tick'></h4>";
 msg_to_be_shown = "<h4 class='message_h4'>" + message + "</h4>";
 row = name_with_tag + msg_to_be_shown 
-document.getElementById("output").innerHTML = row;
+document.getElementById("output").innerHTML += row;
 //End code
       } });  }); }
 getData();
