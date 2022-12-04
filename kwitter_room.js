@@ -1,18 +1,18 @@
 
 //ADD YOUR FIREBASE LINKS HERE
-var firebaseConfig = {
-      apiKey: "AIzaSyCrWVOTyzlQIsosz5_K_FurQ0UEzE1jTJU",
-      authDomain: "kwitter-b49eb.firebaseapp.com",
-      databaseURL: "https://kwitter-b49eb-default-rtdb.firebaseio.com",
-      projectId: "kwitter-b49eb",
-      storageBucket: "kwitter-b49eb.appspot.com",
-      messagingSenderId: "1028691506916",
-      appId: "1:1028691506916:web:6cc9639631a3401fc35ef1",
-      measurementId: "G-V3H05DC0CX"
+var   firebaseConfig = {
+      apiKey: "AIzaSyAjSPeAn3x-uUzA9FPR-WRUc-R2MmFknKw",
+      authDomain: "kwitter-bd349.firebaseapp.com",
+      projectId: "kwitter-bd349",
+      storageBucket: "kwitter-bd349.appspot.com",
+      messagingSenderId: "359450093476",
+      appId: "1:359450093476:web:8a42268f781cce091a8331",
+      measurementId: "G-9BVHP137LC"
     };
     
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
+
 user_name = localStorage.getItem("user_name");
 document.getElementById("text_username").innerHTML = "Welcome " + user_name +"!";
 
